@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-size: cover;
+  z-index: -1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styles for each book container */
+.book {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Styles for book images */
+.book img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Styles for book names */
+.book p {
+  margin-top: 10px;
+  font-size: 16px;
+}

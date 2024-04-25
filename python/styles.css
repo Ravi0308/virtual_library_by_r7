@@ -1,0 +1,99 @@
+* {
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url('library.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.library-header {
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.navigation ul {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-left: 20px;
+  padding-right: 100px;
+}
+
+.navigation ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Add transition */
+}
+
+.navigation ul li a:hover {
+  color: rgb(249, 229, 6);
+}
+
+.reservation-form {
+  margin-top: 20px;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.reservation-form h2 {
+  margin-top: 0;
+}
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select {
+  margin-bottom: 16px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.reservation-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.reservation-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#recommendation-section {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  display: none; /* Initially hidden */
+}
