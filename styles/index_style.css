@@ -1,0 +1,43 @@
+
+  
+  .library-header {
+    background-color: black;
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    width:50px; /* Adjust width as needed */
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-right: 20px; /* Adjust spacing between navbar items */
+  }
+  
+  .navigation li:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    color: gray;
+  }
+  
+/* CSS for the eBooks container */

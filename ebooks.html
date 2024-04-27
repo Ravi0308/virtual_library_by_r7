@@ -1,19 +1,69 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles_books.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBooks</title>
+  <link rel="stylesheet" href="styles/index_style.css">
+  <link rel="stylesheet" href="styles/ebook.css">
+  
 </head>
+
 <body>
-  <!-- Background Image -->
-  <div id="background-image"></div>
+  <!-- //navbar -->
+  <header class="library-header">
+    <div class="navbar">
+      <div class="logo">
+        <img src="media/bg.png" alt="library logo">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ebooks.html">eBooks</a></li>
+          <li><a href="bookbot.html">Book Bot</a></li>
+          <li><a href="recommended.html">Books Recommendation</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>-
+  </header>
 
-  <!-- Display books in a grid container -->
-  <h1>eBooks</h1>
-  <div id="ebooks-container" class="grid-container"></div>
 
-  <script src="script_books.js"></script>
+
+
+
+
+  <!-- Dropdown menu for "See Books by Category" -->
+  <div class="additional-buttons">
+    <div class="dropdown">
+        <button id="categoryButton" class="category-button dropbtn">See Books by Category</button>
+        <div class="dropdown-content">
+          <a id="all">All</a>
+            <a id="selfImprovment">self Improvment</a>
+            <a id="Bussiness_career">Bussiness & Career </a>
+            <a id="academic">Acedemic & Education </a>
+            <a id="Financial">Financial</a>
+        </div>
+    </div>
+    <button  id="mostSearched">Most Searched Books</button>
+    <button id="mostSelling">Top Selling Books</button>
+</div>
+
+<div id="ebooks-container" class="ebooks-container"></div>
+
+<script src="./js/script_books.js"></script>
+
+
+
+
 </body>
+
+
+
+  
 </html>

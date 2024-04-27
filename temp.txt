@@ -1,0 +1,30 @@
+ var booksData = [
+
+    // Action Books
+    { name: "The Bourne Identity", image: "./media/book1.webp", infoUrl: "bourne-identity.html", category: "Action" },
+    { name: "Die Hard", image: "./media/book1.webp", infoUrl: "die-hard.html", category: "Action" },
+    { name: "Mad Max: Fury Road", image: "./media/book1.webp", infoUrl: "mad-max-fury-road.html", category: "Action" },
+    { name: "The Dark Knight", image: "./media/book1.webp", infoUrl: "dark-knight.html", category: "Action" },
+    // Add more Action books as needed
+  
+    // Love Books
+    { name: "Pride and Prejudice", image: "./media/book1.webp", infoUrl: "pride-and-prejudice.html", category: "Love" },
+    { name: "Romeo and Juliet", image: "./media/book1.webp", infoUrl: "romeo-and-juliet.html", category: "Love" },
+    { name: "The Notebook", image: "./media/book1.webp", infoUrl: "notebook.html", category: "Love" },
+    { name: "Gone with the Wind", image: "./media/book1.webp", infoUrl: "gone-with-the-wind.html", category: "Love" },
+    // Add more Love books as needed
+  
+    // Drama Books
+    { name: "The Shawshank Redemption", image: "./media/book1.webp", infoUrl: "shawshank-redemption.html", category: "Drama" },
+    { name: "Forrest Gump", image: "./media/book1.webp", infoUrl: "forrest-gump.html", category: "Drama" },
+    { name: "Schindler's List", image: "./media/book1.webp", infoUrl: "schindlers-list.html", category: "Drama" },
+    { name: "Titanic", image: "./media/book1.webp", infoUrl: "titanic.html", category: "Drama" },
+    // Add more Drama books as needed
+  
+    // Motivation Books
+    { name: "The 7 Habits of Highly Effective People", image: "./media/book1.webp", infoUrl: "7-habits.html", category: "Motivation" },
+    { name: "Think and Grow Rich", image: "./media/book1.webp", infoUrl: "think-and-grow-rich.html", category: "Motivation" },
+    { name: "Man's Search for Meaning", image: "./media/book1.webp", infoUrl: "mans-search-for-meaning.html", category: "Motivation" },
+    { name: "The Alchemist", image: "./media/book1.webp", infoUrl: "alchemist.html", category: "Motivation" },
+    // Add more Motivation books as needed
+  ];
