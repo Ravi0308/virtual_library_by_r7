@@ -1,7 +1,7 @@
 /* CSS for dropdown menu */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
   }
   
   .dropbtn {
@@ -23,7 +23,7 @@
   }
   
   .dropdown-content a {
-    color: black;
+    color: rgb(16, 1, 1);
     padding: 12px 16px;
     text-decoration: none;
     display: block;

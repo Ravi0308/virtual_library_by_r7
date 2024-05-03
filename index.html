@@ -3,38 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eBooks</title>
+  <title>Virtual Library</title>
   <link rel="stylesheet" href="styles/index_style.css">
- <style>
- body {
-  background-image: url('./media/library.jpg');
-  background-size: cover; /* Adjusts the size of the background image */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
-  margin: 0; /* Remove default margin */
-  height: 100vh
-}
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: ;
 
- </style>
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      position: relative; /* Set position relative for body */
+    }
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: block; /* Make the links block level */
+      padding: 10px; /* Adjust padding as needed */
+      border-radius: 10px; /* Add rounded corners */
+    }
+
+    nav ul li a:hover {
+      background-color: #ffd700; /* Change to your desired hover background color */
+    }
+
+    
+
+    /* Blur effect for container */
+    .blur-container {
+       position: relative; 
+    }
+
+    .blur-container::before {
+      content: '';
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+      backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+      z-index: -1;
+    }
+
+    /* Content box styles */
+    .content-box {
+      padding: 20px; /* Adjust padding as needed */
+      background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency and color as needed */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adjust the shadow as needed */
+      text-align: center; /* Center align the content */
+      margin-top: 50px; /* Add margin to separate from header */
+      margin-bottom: 20px; /* Add margin between content boxes */
+    }
+
+    .content-box h1 {
+      font-size: 24px; /* Adjust font size as needed */
+      margin-bottom: 10px; /* Add margin between heading and paragraph */
+      cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .content-box p {
+      font-size: 16px; /* Adjust font size as needed */
+    }
+
+  </style>
 </head>
 <body>
-  <header class="library-header">
-    <div class="navbar">
-      <div class="logo">
-        <img src="media/bg.png" alt="library logo">
+  <video id="bg-video" autoplay loop muted>
+    <source src="./media/3987756-hd_1920_1080_24fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="media/bg.png" alt="library logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5000">Book Bot</a></li>
+            <li><a href="http://localhost:8501">Books Recommendation</a></li>
+            <li><a href="ebooks.html">eBooks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <!-- Search bar -->
+      
       </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ebooks.html">eBooks</a></li>
-          <li><a href="bookbot.html">Book Bot</a></li>
-          <li><a href="recommended.html">Books Recommendation</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- Main content -->
+  <div class="container blur-container">
+    <div class="content-box">
+      <h1>Welcome to the Virtual Library</h1>
+      <p>Welcome to our virtual library, a digital haven for book lovers and knowledge seekers alike. With an extensive collection spanning ebooks, audiobooks, articles, and more, our library offers a wealth of resources covering diverse subjects and genres. What sets us apart is our commitment to providing a personalized experience for every user. Through advanced recommendation algorithms and interactive features, we curate tailored book suggestions, facilitate engaging discussions, and empower users to track their reading progress seamlessly. Moreover, our virtual library is designed for accessibility and convenience, allowing users to access their favorite books from any device with an internet connection. Whether you're at home, on the go, or exploring the world, our library is your gateway to endless knowledge and literary adventures..</p>
+    </div>
+
+    <div class="content-box">
+      <a href="bookbot.html"><h1>Book Bot</h1></a>
+      <p>"Our book chatbot revolutionizes the way you discover new reads. Seamlessly integrated into our platform, this virtual assistant utilizes advanced algorithms to analyze your reading habits, preferences, and interests. By engaging in a natural conversation, it provides personalized book recommendations tailored specifically to you. Whether you're seeking the latest bestsellers, niche genres, or timeless classics, our book chatbot is your trusted guide in navigating the vast world of literature. Say goodbye to endless browsing and hello to curated suggestions that ignite your passion for reading."
+
+
+
+
+
+        .</p>
+    </div>
+
+    <div class="content-box">
+      <a href="recommended.html"><h1>Books Recommendation</h1></a>
+      <p>Our book recommendation system is an intelligent tool designed to enhance your reading experience. Using sophisticated algorithms and machine learning techniques, it analyzes your reading history, genre preferences, and browsing behavior to generate personalized recommendations. Whether you're a fan of thrillers, romance, or science fiction, our system sifts through vast libraries of books to curate a tailored selection just for you. Say goodbye to aimless searching and let our recommendation system guide you to your next literary adventure, ensuring every book you pick up is a perfect match for your interests.</p>
+    </div>
+
+    <div class="content-box">
+      <a href="ebooks.html"><h1>eBooks</h1></a>
+      <p>Certainly! Here's a paragraph about an ebook library offering a variety of books categorized by genre:
+
+        "Welcome to our expansive ebook library, where a wealth of literary treasures awaits discovery. Dive into a world of endless possibilities as you explore our collection, meticulously organized into categories spanning a wide range of genres. Whether you're drawn to the thrilling suspense of mystery novels, the enchanting realms of fantasy, the poignant narratives of contemporary fiction, or the practical wisdom of self-help guides, our library has something to satisfy every reader's appetite. With each category offering a rich selection of titles waiting to be explored, embark on a journey of imagination and enlightenment, immersing yourself in the diverse tapestry of stories that await within our digital shelves.".</p>
+    </div>
+
+    <div class="content-box">
+      <a href="contact.html"><h1>Contact</h1></a>
+      <p>Get in touch with us for any inquiries or assistance.</p>
+    </div>
+
+    <div class="content-box">
+      <a href="about.html"><h1>About</h1></a>
+      <p>Learn more about our virtual library and the team behind it.</p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

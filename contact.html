@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+    background-image: url(./media/anime_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-attachment: relative;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    width:50px; /* Adjust width as needed */
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-right: 20px; /* Adjust spacing between navbar items */
+  }
+  
+  .navigation li:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    color: gray;
+  }
+  
+  
+
+header {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}   
+
+h1, h2 {
+    color: #f3ecec;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+#contact-info {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
+        }
+
+        #contact-info h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #contact-info ul li {
+            margin-bottom: 10px;
+        }
+
+        #contact-info ul li strong {
+            font-weight: bold;
+        }
+
+        #contact-info ul li a {
+            color: #007bff; /* Blue color for links */
+            text-decoration: none;
+        }
+
+        #contact-info ul li a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+ input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b51c1c;
+}
+
+.review {
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.confirmation-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Green background color */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Ensure it appears above other elements */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.confirmation-toast:hover {
+  opacity: 0.9;
+}
+
+    </style>
+</head>
+<body>
+   
+    </nav>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+              <img src="media/bg.png" alt="library logo">
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5000">Book Bot</a></li>
+            <li><a href="http://localhost:8501">Books Recommendation</a></li>
+            <li><a href="ebooks.html">eBooks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+              </ul>
+            </nav>
+          </div>-
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>
+                    <strong>Email:</strong> <a href="mailto:nayiravi666@gmail.com">nayiravi666@gmail.com</a>
+                </li>
+                <li>
+                    <strong>Phone:</strong> <a href="tel:9428214929">9428214929</a>
+                </li>
+                <li>
+                    <strong>Address:</strong> In Your Hearts
+                </li>
+            </ul>
+        </section>
+        
+        <section id="review-section">
+            <h2>Leave a Review</h2>
+            <form id="review-form">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title" name="book-title"><br><br>
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                <label for="review">Review:</label>
+                <textarea id="review" name="review"></textarea><br><br>
+                <button type="submit" onclick="showConfirmationToast()">Submit Review</button>
+            </form>
+            <div id="review-list">
+                <!-- reviews will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById("review-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const bookTitle = document.getElementById("book-title").value;
+    const rating = document.getElementById("rating").value;
+    const reviewText = document.getElementById("review").value;
+
+    // Create review element
+    const reviewElement = document.createElement("div");
+    reviewElement.classList.add("review");
+    reviewElement.innerHTML = `<strong>${bookTitle}</strong><br>Rating: ${rating}/5<br>${reviewText}`;
+
+    // Append review to review list
+    document.getElementById("review-list").appendChild(reviewElement);
+
+    // Reset form fields
+    document.getElementById("book-title").value = "";
+    document.getElementById("rating").value = "";
+    document.getElementById("review").value = "";
+});
+function showConfirmationToast() {
+  // Create a toast element
+  var toast = document.createElement('div');
+  toast.classList.add('confirmation-toast');
+  toast.textContent = "Submitted";
+
+  // Append toast to the body
+  document.body.appendChild(toast);
+
+  // Set a timeout to remove the toast after a certain duration
+  setTimeout(function() {
+    toast.remove();
+  }, 3000); // 3000 milliseconds (3 seconds) in this example
+}
+
+// Example usage
+
+
+    </script>
+</body>
+</html>

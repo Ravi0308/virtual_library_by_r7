@@ -13,7 +13,7 @@
   }
   
   .logo img {
-    width:50px; /* Adjust width as needed */
+    width: 100px; /* Adjust width as needed */
   }
   
   .navigation ul {
@@ -28,7 +28,7 @@
   }
   
   .navigation li:last-child {
-    margin-right: 0;
+    margin-right: 20px;
   }
   
   .navigation a {

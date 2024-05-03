@@ -110,7 +110,7 @@ if (category === "All") {
       });
       
       bookDiv.appendChild(readButton);
-    });
+    }); 
     
     
     
